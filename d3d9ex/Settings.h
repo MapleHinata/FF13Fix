@@ -64,6 +64,12 @@ SETTING(bool, BoolValue, DisableIngameControllerHotSwapping, FFXIII, true,
 	L"# Note that EnableControllerVibration is incompatible with the controller hotswapping, \n"
 	L"#  so it is automatically disabled if DisableIngameControllerHotSwapping is set to 'false'"
 );
+SETTING(bool, BoolValue, FixScissorRect, FFXIII, true,
+	L"# FixScissorRect\n"
+	L"#\n"
+	L"# This fixes the enemy scan text on resolutions over 720p on Windows, however, this fix isn't needed on DXVK and causes the text to break on it.\n"
+	L"# Keep this enabled on Windows, disable it if using DXVK.\n"
+);
 SETTING(bool, BoolValue, EnableControllerVibration, FFXIII, true, 
 	L"# EnableControllerVibration\n"
 	L"#\n"

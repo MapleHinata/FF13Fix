@@ -365,6 +365,11 @@ void MainContext::FF13_RemoveContinuousControllerScan()
 
 void MainContext::FF13_FixScissorRect()
 {
+	if(!config.GetFFXIIIFixScissorRect())
+	{
+		spdlog::info("FixScissorRect should not be enabled (config file)");
+		return;
+	}
 	spdlog::info("Fixing ScissorRect...");
 	const float originalWidth = 1280.0F;
 	const float resolutionFactorW = (float)*ff13_internal_res_w / originalWidth;
